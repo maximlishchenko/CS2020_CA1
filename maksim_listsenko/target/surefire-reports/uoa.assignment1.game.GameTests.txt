@@ -1,56 +1,36 @@
 -------------------------------------------------------------------------------
 Test set: uoa.assignment1.game.GameTests
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 2.204 s <<< FAILURE! - in uoa.assignment1.game.GameTests
-checkMarkingKilledMonster(uoa.assignment1.game.GameTests)  Time elapsed: 0.016 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to kill a monster...   Check Task 5.2[0mjava.lang.AssertionError
+Tests run: 16, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 2.096 s <<< FAILURE! - in uoa.assignment1.game.GameTests
+checkMarkingKilledMonster(uoa.assignment1.game.GameTests)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to kill a monster...   Check Task 5.2[0mjava.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 10
 	at uoa.assignment1.game.GameTests.checkMarkingKilledMonster(GameTests.java:641)
 
-checkMoveCharacterFull(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 3.4[0mjava.lang.AssertionError: expected:<8> but was:<9>
-	at uoa.assignment1.game.GameTests.checkMoveCharacterFull(GameTests.java:401)
-
-checkEndGame(uoa.assignment1.game.GameTests)  Time elapsed: 0.001 s  <<< FAILURE!
+checkEndGame(uoa.assignment1.game.GameTests)  Time elapsed: 0.017 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to win or lose the game.   Check Task 5.5[0mjava.lang.NullPointerException
 	at uoa.assignment1.game.GameTests.checkEndGame(GameTests.java:684)
 
-checkPlayerAndMonsterPositionInLayout(uoa.assignment1.game.GameTests)  Time elapsed: 0.015 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 2.5[0mjava.lang.AssertionError: expected:<146> but was:<150>
-	at uoa.assignment1.game.GameTests.checkPlayerAndMonsterPositionInLayout(GameTests.java:190)
-
-checkHealthInformationPrinted(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
+checkHealthInformationPrinted(uoa.assignment1.game.GameTests)  Time elapsed: 0.007 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mSomething is not right. Are you printing the health information    Check Task 5.1[0mjava.lang.AssertionError: expected:<1> but was:<0>
 	at uoa.assignment1.game.GameTests.checkHealthInformationPrinted(GameTests.java:547)
 
-checkMoveCharacter(uoa.assignment1.game.GameTests)  Time elapsed: 0.038 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. moveCharacter method must print exactly this sentence when the use rinput is incorrect: 'Use only keywords up, down, left, right' Check Task 3.3[0mjava.lang.AssertionError
-	at uoa.assignment1.game.GameTests.checkMoveCharacter(GameTests.java:322)
-
-checkMoveToOccupiedField(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
+checkMoveToOccupiedField(uoa.assignment1.game.GameTests)  Time elapsed: 0.001 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mSomething is not right.    Check Task 4.4[0mjava.lang.AssertionError
 	at uoa.assignment1.game.GameTests.checkMoveToOccupiedField(GameTests.java:517)
 
-checkRunGameMain(uoa.assignment1.game.GameTests)  Time elapsed: 0.999 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 3.1[0mjava.lang.AssertionError: expected:<146> but was:<0>
-	at uoa.assignment1.game.GameTests.checkRunGameMain(GameTests.java:238)
-
-checkKillingPlayer(uoa.assignment1.game.GameTests)  Time elapsed: 0.001 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that monster can't kill the player...   Check Task 5.3[0mjava.lang.AssertionError
+checkKillingPlayer(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: [47m[30mSomething is not right. It seems that monster can't kill the player...   Check Task 5.3[0mjava.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
 	at uoa.assignment1.game.GameTests.checkKillingPlayer(GameTests.java:606)
 
-checkRunGameMainWithUserInput(uoa.assignment1.game.GameTests)  Time elapsed: 1.002 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 3.2[0mjava.lang.AssertionError
-	at uoa.assignment1.game.GameTests.checkRunGameMainWithUserInput(GameTests.java:290)
-
-checkMoveOfPlayers(uoa.assignment1.game.GameTests)  Time elapsed: 0.002 s  <<< FAILURE!
+checkMoveOfPlayers(uoa.assignment1.game.GameTests)  Time elapsed: 0.003 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 4.3[0mjava.lang.NullPointerException
 	at uoa.assignment1.game.GameTests.checkMoveOfPlayers(GameTests.java:492)
 
-checkKillingMonster(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to kill a monster...   Check Task 5.2[0mjava.lang.AssertionError
+checkKillingMonster(uoa.assignment1.game.GameTests)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to kill a monster...   Check Task 5.2[0mjava.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 10
 	at uoa.assignment1.game.GameTests.checkKillingMonster(GameTests.java:576)
 
-checkMoveIntoWall(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 4.1[0mjava.lang.AssertionError
+checkMoveIntoWall(uoa.assignment1.game.GameTests)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: [47m[30mSomething is not right.  Check Task 4.1[0mjava.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
 	at uoa.assignment1.game.GameTests.checkMoveIntoWall(GameTests.java:450)
 

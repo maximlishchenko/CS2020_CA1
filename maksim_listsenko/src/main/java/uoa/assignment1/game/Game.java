@@ -7,6 +7,8 @@ public class Game {
 
     
     Game (int height, int width) {
+        Map map = new Map(height, width);
+        map.printLayout();
     }
     			
     public Map getMap() {

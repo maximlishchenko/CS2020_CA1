@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: uoa.assignment1.character.CharacterTests
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.025 s <<< FAILURE! - in uoa.assignment1.character.CharacterTests
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.034 s <<< FAILURE! - in uoa.assignment1.character.CharacterTests
 checkIfMonsterDecidesRandomly(uoa.assignment1.character.CharacterTests)  Time elapsed: 0 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mMake sure the class Monster contains a method decideMove() as per T4.2 and all previous tasks have been completed.[0mjava.lang.AssertionError: [47m[30mIs your method Monster.decideMove() really random Our test on 100k tries shows that these many decisions were generated for each category up:0 down:0 left:0 right:0 See task 1.5 instructions[0m
 	at uoa.assignment1.character.CharacterTests.checkIfMonsterDecidesRandomly(CharacterTests.java:325)
