@@ -15,7 +15,13 @@ public class RunGame {
         while (!gameOver) {
             System.out.printf("Round %d%n", round);
             String input = in.nextLine();
-            gameOver = true;
+            game.nextRound(input);
+            System.out.println();
+            for (int i = 0; i < game.getMap().characters.length; i++) {
+                //System.out.printf("Health %s:  %d%n", char.sayName(), char.getHealth());
+                System.out.printf("Health %s:  %d%n", game.getMap().characters[i].sayName(), game.getMap().characters[i].getHealth());
+            }
+            //gameOver = true;
 		}
 	}
 

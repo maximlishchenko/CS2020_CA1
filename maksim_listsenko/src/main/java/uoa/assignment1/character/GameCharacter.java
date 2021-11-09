@@ -18,7 +18,7 @@ public abstract class GameCharacter {
 	
 	public abstract boolean successfulDefense ();
 	
-	
+    
 	public String sayName() {
         return name;
 	}

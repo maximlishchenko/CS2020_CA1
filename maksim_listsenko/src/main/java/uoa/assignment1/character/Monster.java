@@ -29,9 +29,18 @@ public class Monster extends GameCharacter {
 
 
 	
-	public String decideMove () {
-		
-		return "move";
+	public String decideMove() {
+        Random random = new Random();
+        int roll = random.nextInt(4);
+        if (roll == 0) {
+            return "up";
+        } else if (roll == 1) {
+            return "down";
+        } else if (roll == 2) {
+            return "left";
+        } else {
+            return "right";
+        }
 	}
 
 }
