@@ -18,13 +18,13 @@ public class GameLogic {
         }
 
         if (valid) {
-            if (input == "up") {
+            if (input.equals("up") && character.getHealth() > 0) {
                 moveUp(character, gameMap);
-            } else if (input == "down") {
+            } else if (input.equals("down") && character.getHealth() > 0) {
                 moveDown(character, gameMap);
-            } else if (input == "left") {
+            } else if (input.equals("left") && character.getHealth() > 0) {
                 moveLeft(character, gameMap);
-            } else if (input == "right") {
+            } else if (input.equals("right") && character.getHealth() > 0) {
                 moveRight(character, gameMap);
             }
         } else {
@@ -34,10 +34,26 @@ public class GameLogic {
 
     private static void moveRight(GameCharacter character, Map gameMap) {
         if (character.column >= (gameMap.layout[character.row].length - 1)) {
-            System.out.println("You can't go right. You lose a move.");
+            System.out.println("You can't go right. You lose a move");
         } else if (!gameMap.layout[character.row][character.column + 1].equals(".")) {
             if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row][character.column + 1].equals("%")) {
                 System.out.println("Monster already there so can't move");
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row][character.column + 1].equals("%")) {
+                int i = 1;
+                while (i < gameMap.characters.length) {
+                    if ((character.row == gameMap.characters[i].row) && ((character.column + 1) == gameMap.characters[i].column)) {
+                        break;
+                    }
+                    i++;
+                }
+                character.hurtCharacter(gameMap.characters[i]);
+                if (gameMap.characters[i].getHealth() <= 0) {
+                    gameMap.layout[gameMap.characters[i].row][gameMap.characters[i].column] = "x";
+                }
+            } else if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row][character.column + 1].equals("*")) {
+                character.hurtCharacter(gameMap.characters[0]);
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row][character.column + 1].equals("x")) {
+                System.out.println("Character already dead");
             }
         } else {
             gameMap.layout[character.row][character.column] = ".";
@@ -52,10 +68,26 @@ public class GameLogic {
 
     private static void moveLeft(GameCharacter character, Map gameMap) {
         if (character.column <= 0) {
-            System.out.println("You can't go left. You lose a move.");
+            System.out.println("You can't go left. You lose a move");
         } else if (!gameMap.layout[character.row][character.column - 1].equals(".")) {
             if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row][character.column - 1].equals("%")) {
                 System.out.println("Monster already there so can't move");
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row][character.column - 1].equals("%")) {
+                int i = 1;
+                while (i < gameMap.characters.length) {
+                    if ((character.row == gameMap.characters[i].row) && ((character.column - 1) == gameMap.characters[i].column)) {
+                        break;
+                    }
+                    i++;
+                }
+                character.hurtCharacter(gameMap.characters[i]);
+                if (gameMap.characters[i].getHealth() <= 0) {
+                    gameMap.layout[gameMap.characters[i].row][gameMap.characters[i].column] = "x";
+                }
+            } else if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row][character.column - 1].equals("*")) {
+                character.hurtCharacter(gameMap.characters[0]);
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row][character.column - 1].equals("x")) {
+                System.out.println("Character already dead");
             }
         } else {
             gameMap.layout[character.row][character.column] = ".";
@@ -70,10 +102,26 @@ public class GameLogic {
 
     private static void moveUp(GameCharacter character, Map gameMap) {
         if (character.row <= 0) {
-            System.out.println("You can't go up. You lose a move.");
+            System.out.println("You can't go up. You lose a move");
         } else if (!gameMap.layout[character.row - 1][character.column].equals(".")) {
             if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row - 1][character.column].equals("%")) {
                 System.out.println("Monster already there so can't move");
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row - 1][character.column].equals("%")) {
+                int i = 1;
+                while (i < gameMap.characters.length) {
+                    if (((character.row - 1) == gameMap.characters[i].row) && (character.column == gameMap.characters[i].column)) {
+                        break;
+                    }
+                    i++;
+                }
+                character.hurtCharacter(gameMap.characters[i]);
+                if (gameMap.characters[i].getHealth() <= 0) {
+                    gameMap.layout[gameMap.characters[i].row][gameMap.characters[i].column] = "x";
+                }
+            } else if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row - 1][character.column].equals("*")) {
+                character.hurtCharacter(gameMap.characters[0]);
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row - 1][character.column].equals("x")) {
+                System.out.println("Character already dead");
             }
         } else {
             gameMap.layout[character.row][character.column] = ".";
@@ -88,10 +136,26 @@ public class GameLogic {
 
     private static void moveDown(GameCharacter character, Map gameMap) {
         if (character.row >= (gameMap.layout.length - 1)) {
-            System.out.println("You can't go down. You lose a move.");
+            System.out.println("You can't go down. You lose a move");
         } else if (!gameMap.layout[character.row + 1][character.column].equals(".")) {
             if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row + 1][character.column].equals("%")) {
                 System.out.println("Monster already there so can't move");
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row + 1][character.column].equals("%")) {
+                int i = 1;
+                while (i < gameMap.characters.length) {
+                    if (((character.row + 1) == gameMap.characters[i].row) && (character.column == gameMap.characters[i].column)) {
+                        break;
+                    }
+                    i++;
+                }
+                character.hurtCharacter(gameMap.characters[i]);
+                if (gameMap.characters[i].getHealth() <= 0) {
+                    gameMap.layout[gameMap.characters[i].row][gameMap.characters[i].column] = "x";
+                }
+            } else if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row + 1][character.column].equals("*")) {
+                character.hurtCharacter(gameMap.characters[0]);
+            } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row + 1][character.column].equals("x")) {
+                System.out.println("Character already dead");
             }
         } else {
             gameMap.layout[character.row][character.column] = ".";

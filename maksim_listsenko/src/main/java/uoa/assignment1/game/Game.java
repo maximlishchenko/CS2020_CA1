@@ -21,24 +21,14 @@ public class Game {
         GameLogic.moveCharacter(input, map, map.characters[0]);
 
         for (int i = 1; i < map.characters.length; i++) {
-            Monster monster = (Monster)map.characters[i];
-            String decision = monster.decideMove();
-            System.out.printf("%s is moving %s%n", map.characters[i].sayName(), decision);
-            GameLogic.moveCharacter(decision, map, map.characters[i]);
+            if (map.characters[i].getHealth() > 0) {
+                Monster monster = (Monster)map.characters[i];
+                String decision = monster.decideMove();
+                System.out.printf("%s is moving %s%n", map.characters[i].sayName(), decision);
+                GameLogic.moveCharacter(decision, map, map.characters[i]);
+            }
         }
 
-//         int count = 0;
-//         for (int i = 0; i < map.characters.length; i++) {
-//             if (map.characters[i].getHealth() <= 0) {
-//                 count += 1;
-//             }
-//         }
-
-//         if (count >= map.characters.length) {
-//             return true;
-//         } else {
-//             return false;
-//         }
         if (map.characters[0].getHealth() > 0) {
             int deadMonsterCount = 0;
             for (int i = 1; i < map.characters.length; i++) {
@@ -52,8 +42,9 @@ public class Game {
             } else {
                 return false;
             }
+        } else {
+            return true;
         }
-        return true;
     }
    
 }

@@ -1,24 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: uoa.assignment1.game.GameTests
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 2.096 s <<< FAILURE! - in uoa.assignment1.game.GameTests
-checkMarkingKilledMonster(uoa.assignment1.game.GameTests)  Time elapsed: 0.01 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to kill a monster...   Check Task 5.2[0mjava.lang.AssertionError
-	at uoa.assignment1.game.GameTests.checkMarkingKilledMonster(GameTests.java:641)
-
-checkEndGame(uoa.assignment1.game.GameTests)  Time elapsed: 0.021 s  <<< FAILURE!
+Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.126 s <<< FAILURE! - in uoa.assignment1.game.GameTests
+checkEndGame(uoa.assignment1.game.GameTests)  Time elapsed: 0.017 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to win or lose the game.   Check Task 5.5[0mjava.lang.AssertionError
 	at uoa.assignment1.game.GameTests.checkEndGame(GameTests.java:684)
 
-checkHealthInformationPrinted(uoa.assignment1.game.GameTests)  Time elapsed: 0.007 s  <<< FAILURE!
+checkHealthInformationPrinted(uoa.assignment1.game.GameTests)  Time elapsed: 0.006 s  <<< FAILURE!
 java.lang.AssertionError: [47m[30mSomething is not right. Are you printing the health information    Check Task 5.1[0mjava.lang.AssertionError: expected:<1> but was:<0>
 	at uoa.assignment1.game.GameTests.checkHealthInformationPrinted(GameTests.java:547)
-
-checkKillingPlayer(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that monster can't kill the player...   Check Task 5.3[0mjava.lang.AssertionError
-	at uoa.assignment1.game.GameTests.checkKillingPlayer(GameTests.java:606)
-
-checkKillingMonster(uoa.assignment1.game.GameTests)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to kill a monster...   Check Task 5.2[0mjava.lang.AssertionError
-	at uoa.assignment1.game.GameTests.checkKillingMonster(GameTests.java:576)
 

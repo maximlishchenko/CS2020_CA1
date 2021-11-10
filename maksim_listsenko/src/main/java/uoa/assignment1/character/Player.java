@@ -14,6 +14,9 @@ public class Player extends GameCharacter{
         if (!character.successfulDefense()) {
             int originalHealth = character.getHealth();
             character.setHealth(originalHealth - 50);
+            System.out.printf("!!HIT!! %s successfully attacked %s%n", this.sayName(), character.sayName());
+        } else {
+            System.out.printf("!!MISS!! %s successfully defended attack from %s%n", character.sayName(), this.sayName());
         }
     }
 
