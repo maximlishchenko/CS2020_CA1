@@ -33,10 +33,12 @@ public class GameLogic {
 	}
 
     private static void moveRight(GameCharacter character, Map gameMap) {
+        System.out.printf("%s is moving right%n", character.sayName());
         if (character.column >= (gameMap.layout[character.row].length - 1)) {
             System.out.println("You can't go right. You lose a move");
         } else if (!gameMap.layout[character.row][character.column + 1].equals(".")) {
-            if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row][character.column + 1].equals("%")) {
+            if (gameMap.layout[character.row][character.column].equals("%") &&
+                ((gameMap.layout[character.row][character.column + 1].equals("%")) || (gameMap.layout[character.row][character.column + 1].equals("x")))) {
                 System.out.println("Monster already there so can't move");
             } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row][character.column + 1].equals("%")) {
                 int i = 1;
@@ -67,10 +69,12 @@ public class GameLogic {
     }
 
     private static void moveLeft(GameCharacter character, Map gameMap) {
+        System.out.printf("%s is moving left%n", character.sayName());
         if (character.column <= 0) {
             System.out.println("You can't go left. You lose a move");
         } else if (!gameMap.layout[character.row][character.column - 1].equals(".")) {
-            if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row][character.column - 1].equals("%")) {
+            if (gameMap.layout[character.row][character.column].equals("%") &&
+                ((gameMap.layout[character.row][character.column - 1].equals("%")) || (gameMap.layout[character.row][character.column - 1].equals("x")))) {
                 System.out.println("Monster already there so can't move");
             } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row][character.column - 1].equals("%")) {
                 int i = 1;
@@ -101,10 +105,12 @@ public class GameLogic {
     }
 
     private static void moveUp(GameCharacter character, Map gameMap) {
+        System.out.printf("%s is moving up%n", character.sayName());
         if (character.row <= 0) {
             System.out.println("You can't go up. You lose a move");
         } else if (!gameMap.layout[character.row - 1][character.column].equals(".")) {
-            if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row - 1][character.column].equals("%")) {
+            if (gameMap.layout[character.row][character.column].equals("%") &&
+                ((gameMap.layout[character.row - 1][character.column].equals("%")) || (gameMap.layout[character.row - 1][character.column].equals("x")))) {
                 System.out.println("Monster already there so can't move");
             } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row - 1][character.column].equals("%")) {
                 int i = 1;
@@ -135,10 +141,12 @@ public class GameLogic {
     }
 
     private static void moveDown(GameCharacter character, Map gameMap) {
+        System.out.printf("%s is moving down%n", character.sayName());
         if (character.row >= (gameMap.layout.length - 1)) {
             System.out.println("You can't go down. You lose a move");
         } else if (!gameMap.layout[character.row + 1][character.column].equals(".")) {
-            if (gameMap.layout[character.row][character.column].equals("%") && gameMap.layout[character.row + 1][character.column].equals("%")) {
+            if (gameMap.layout[character.row][character.column].equals("%") &&
+                ((gameMap.layout[character.row + 1][character.column].equals("%")) || (gameMap.layout[character.row + 1][character.column].equals("x")))) {
                 System.out.println("Monster already there so can't move");
             } else if (gameMap.layout[character.row][character.column].equals("*") && gameMap.layout[character.row + 1][character.column].equals("%")) {
                 int i = 1;

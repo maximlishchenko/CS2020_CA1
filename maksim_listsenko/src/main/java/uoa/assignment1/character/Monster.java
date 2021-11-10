@@ -19,7 +19,7 @@ public class Monster extends GameCharacter {
         }
 	}
 
-	
+
 	public boolean successfulDefense() {
         Random random = new Random();
         int roll = random.nextInt(2);
@@ -31,7 +31,7 @@ public class Monster extends GameCharacter {
 	}
 
 
-	
+
 	public String decideMove() {
         Random random = new Random();
         int roll = random.nextInt(4);

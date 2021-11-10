@@ -8,9 +8,8 @@ public class Player extends GameCharacter{
 		super(name);
 	}
 
-	
-	public
-	void hurtCharacter(GameCharacter character) {
+
+	public void hurtCharacter(GameCharacter character) {
         if (!character.successfulDefense()) {
             int originalHealth = character.getHealth();
             character.setHealth(originalHealth - 50);
@@ -20,9 +19,8 @@ public class Player extends GameCharacter{
         }
     }
 
-	
-	public
-	boolean successfulDefense() {
+
+	public boolean successfulDefense() {
         Random random = new Random();
         int roll = random.nextInt(10);
         if (roll < 3) {
@@ -31,5 +29,4 @@ public class Player extends GameCharacter{
             return false;
         }
 	}
-
 }

@@ -8,7 +8,7 @@ public class Map {
 
     public String [][] layout;
     public GameCharacter characters [] = new GameCharacter[4];
- 
+
     Map (int height, int width) {
         this.layout = new String[height][width];
         initialiseArray();

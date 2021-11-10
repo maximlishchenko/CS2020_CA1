@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: uoa.assignment1.game.GameTests
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.126 s <<< FAILURE! - in uoa.assignment1.game.GameTests
-checkEndGame(uoa.assignment1.game.GameTests)  Time elapsed: 0.017 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. It seems that it is not possible to win or lose the game.   Check Task 5.5[0mjava.lang.AssertionError
-	at uoa.assignment1.game.GameTests.checkEndGame(GameTests.java:684)
-
-checkHealthInformationPrinted(uoa.assignment1.game.GameTests)  Time elapsed: 0.006 s  <<< FAILURE!
-java.lang.AssertionError: [47m[30mSomething is not right. Are you printing the health information    Check Task 5.1[0mjava.lang.AssertionError: expected:<1> but was:<0>
-	at uoa.assignment1.game.GameTests.checkHealthInformationPrinted(GameTests.java:547)
-
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.111 s - in uoa.assignment1.game.GameTests

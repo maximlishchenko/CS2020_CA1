@@ -1,24 +1,24 @@
 package uoa.assignment1.character;
 
 public abstract class GameCharacter {
-    
+
 	private String name ="";
-	
+
 	private int health = 100; 
-	
+
 	public int row;
 	public int column;
-	
-	
+
+
 	public GameCharacter (String name) {
 		this.name = name;
 	}
-	
+
 	public abstract void hurtCharacter (GameCharacter character);
-	
+
 	public abstract boolean successfulDefense ();
-	
-    
+
+
 	public String sayName() {
         return name;
 	}
@@ -31,4 +31,3 @@ public abstract class GameCharacter {
 		this.health = health;
 	}
 }
-
